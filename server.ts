@@ -3,9 +3,8 @@ import { client } from "./dbclient.ts";
 import * as todoSql from "./todoSql.ts";
 
 const router = new Router();
-router.get("/", async (ctx) => {
-  //context.response.body = { msg: "Hello world!" };
-  await send(ctx, "/public/index.html", { root: `${Deno.cwd()}` });
+router.get("/", (ctx) => {
+  ctx.response.body = { msg: "Hello world!" }; 
 });
 
 router.get("/api/todos", async (context) => {
