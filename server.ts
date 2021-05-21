@@ -1,5 +1,4 @@
-import { Application, oakMiddleware, Router, send } from "./deps.ts";
-import { staticFileMiddleware } from "./staticFileMiddlwaur.ts";
+import { Application, oakMiddleware, Router, send } from "./deps.ts"; 
 import { client } from "./dbclient.ts";
 import * as todoSql from "./todoSql.ts";
 
@@ -74,8 +73,7 @@ router.delete("/api/todos/:id", async (context) => {
 const app = new Application();
 
 app.use(router.routes());
-app.use(router.allowedMethods());
-app.use(staticFileMiddleware);
+app.use(router.allowedMethods()); 
 
 //await app.listen({ port: 8000 });
 addEventListener("fetch", app.fetchEventHandler());
