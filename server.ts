@@ -1,4 +1,4 @@
-import { Application, oakMiddleware, Router, send } from "./deps.ts"; 
+import { Application, Router, send } from "./deps.ts"; 
 import { client } from "./dbclient.ts";
 import * as todoSql from "./todoSql.ts";
 

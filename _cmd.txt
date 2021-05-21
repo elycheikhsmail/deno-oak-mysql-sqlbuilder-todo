@@ -3,3 +3,5 @@ export DBUSER=deno
 export DBNAME=deno
 export DBPASSWORD=deno 
 deployctl run --watch --no-check server.ts 
+
+deployctl run --watch   server.ts 
