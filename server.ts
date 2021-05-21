@@ -1,9 +1,10 @@
-import { Application, Router, send } from "./deps.ts"; 
+import { Application, Router } from "./deps.ts"; 
 import { client } from "./dbclient.ts";
 import * as todoSql from "./todoSql.ts";
 
 const router = new Router();
 router.get("/", (ctx) => {
+  
   ctx.response.body = { msg: "Hello world!" }; 
 });
 

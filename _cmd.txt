@@ -2,6 +2,8 @@ export HOST=127.0.0.1
 export DBUSER=deno
 export DBNAME=deno
 export DBPASSWORD=deno 
-deployctl run --watch --no-check server.ts 
+deployctl run --watch   server.js
 
 deployctl run --watch   server.ts 
+
+deployctl run --watch --no-check server.ts 
